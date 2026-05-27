@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Age Calculator</string>
-    <style name="Theme.AgeCalculator" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">#4CAF50</item>
-        <item name="colorPrimaryDark">#388E3C</item>
-        <item name="colorAccent">#4CAF50</item>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">agecalc</string>
+    <style name="Base.Theme.Agecalc" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
     </style>
+    <style name="Theme.Agecalc" parent="Base.Theme.Agecalc"/>
 </resources>
