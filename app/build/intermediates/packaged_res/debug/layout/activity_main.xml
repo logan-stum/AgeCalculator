@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_main.xml
+    This file defines what the screen looks like.
+    We use a ScrollView so the content doesn't get cut off on small screens.
+    Inside it, a vertical LinearLayout stacks everything top to bottom.
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- App title at the top -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Age Calculator"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Short instruction text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Fill in your info and tap the button!"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="28dp" />
+
+        <!-- ===== NAME SECTION ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/inputFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter first name"
+            android:inputType="textPersonName"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/inputLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter last name"
+            android:inputType="textPersonName"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ===== DATE OF BIRTH SECTION ===== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Three side-by-side boxes for month, day, and year -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <!-- Month -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Month"
+                    android:textSize="12sp"
+                    android:textColor="#888888"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/inputBirthMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="MM"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:background="@drawable/input_background"
+                    android:padding="12dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Day -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day"
+                    android:textSize="12sp"
+                    android:textColor="#888888"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/inputBirthDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DD"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:background="@drawable/input_background"
+                    android:padding="12dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Year -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Year"
+                    android:textSize="12sp"
+                    android:textColor="#888888"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/inputBirthYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="YYYY"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:background="@drawable/input_background"
+                    android:padding="12dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===== CALCULATE BUTTON ===== -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Age"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:padding="14dp" />
+
+    </LinearLayout>
+</ScrollView>
